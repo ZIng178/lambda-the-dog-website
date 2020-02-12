@@ -10,6 +10,7 @@ export function useDogImages(breed, count) {
     setImages([]);
 
     // make a new api call any time `breed` or `count` changes
+    //console.log("bk: api.js: useEffect: axios: ", axios);
     axios
       .get(`https://dog.ceo/api/breed/${breed}/images/random/${count}`)
       .then(result => {
